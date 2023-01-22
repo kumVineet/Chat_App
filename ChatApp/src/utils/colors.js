@@ -1,6 +1,7 @@
-const colors = {
+const Colors = {
   black: '#000000',
-  theme: '#232323',
+  theme: '#6b34a8',
+  lightTheme: '#d1aede',
   charcoal: '#474747',
   gray: '#7D7D7D',
   ligthishgray: '#9D9D9D',
@@ -11,6 +12,9 @@ const colors = {
   yps: '#637599',
   ypsLight: '#78928F',
   cosmic: '#963D32',
-  uastudioGreen: '#219653',
+  studioGreen: '#219653',
+  blue: '#3eb0e7',
+  lightBlue: '#4dcbf1',
+  pink: '#fd2f89',
 };
-export default colors;
+export default Colors;

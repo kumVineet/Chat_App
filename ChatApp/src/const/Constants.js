@@ -1,11 +1,11 @@
 import {Dimensions, Platform} from 'react-native';
 import normalize from 'react-native-normalize';
-import colors from '../utils/colors';
+import Colors from '../utils/Colors';
 
 let headerHeight = Platform.OS === 'ios' ? normalize(66) : normalize(46);
 let footerHeight = normalize(55);
 
-const constants = {
+const Constants = {
   headerHeight: headerHeight,
   footerHeight: footerHeight,
   viewHeight: Dimensions.get('window').height - headerHeight,
@@ -13,6 +13,6 @@ const constants = {
   defaultSpacer: normalize(10),
   screenHeight: Dimensions.get('window').height,
   screenWidth: Dimensions.get('window').width,
-  divider: {backgroundColor: colors.smoke},
+  divider: {backgroundColor: Colors.smoke},
 };
-export default constants;
+export default Constants;

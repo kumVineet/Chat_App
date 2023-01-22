@@ -2,36 +2,33 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import SignInScreen from '../screens/SignInScreen';
+import LandingPage from '../screens/Authentication/LandingPage';
+import SignUpScreen from '../screens/Authentication/SignUpScreen';
+import SignInScreen from '../screens/Authentication/SignInScreen';
 import GroupScreen from '../screens/GroupScreen';
 import AddGroupScreen from '../screens/AddGroupScreen';
 import ChatScreen from '../screens/ChatScreen';
 
 const Stack = createStackNavigator();
 
-const ChatFlow = () => {
+const AuthChatFlow = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="chat">
+      <Stack.Navigator initialRouteName="AuthChat">
+        <Stack.Screen
+          name="LandingPage"
+          component={LandingPage}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="SignInScreen"
           component={SignInScreen}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="GroupScreen"
-          component={GroupScreen}
-          options={{title: 'Groups'}}
-        />
-        <Stack.Screen
-          name="AddGroupScreen"
-          component={AddGroupScreen}
-          options={{title: 'Add Group'}}
-        />
-        <Stack.Screen
-          name="ChatScreen"
-          component={ChatScreen}
-          options={{title: 'Chats'}}
+          name="SignUpScreen"
+          component={SignUpScreen}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -39,7 +36,7 @@ const ChatFlow = () => {
 };
 
 const MainStackNavigator = () => {
-  return <ChatFlow />;
+  return <AuthChatFlow />;
 };
 
 export default MainStackNavigator;
